@@ -24,15 +24,19 @@ cell的.m文件中需要实现两个方法
 
 使用步骤：
 一、创建ZKQuickTableTool
+
 ZKQuickTableTool *quickTableTool = [[ZKQuickTableTool alloc] initCreateTableWithView:self.tableBgView tableStyle:UITableViewStyleGrouped];
 
 二、建立数据源
 //建立数据
 NSMutableArray *finalArray = [[NSMutableArray alloc] init];
+
 NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table",@"服务端返回的数据页面",@"cell带有动画的页面",
     @"cell带有按钮输入框",@"服务端数据带有type，根据type进行绑定不同cell",@"带有tableHeaderView",@"长按移动单元格",
     @"删除单元格",@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"99999"];
+    
 NSMutableArray *sectionOneArray = [[NSMutableArray alloc] init];
+
 for (int i = 0; i < titleArray.count; i ++) {
     ZKQuickCommonModel *cellOneModel = [[ZKQuickCommonModel alloc] init];
     cellOneModel.titleString = titleArray[i];
