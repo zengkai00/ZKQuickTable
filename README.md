@@ -1,6 +1,8 @@
 # ZKQuickTable
-# 快速建表，整个项目使用同一个表。
-## UITableView快速建立
+#### 快速建表，整个项目使用同一个表。
+#### 快速、高效地构建TableView
+#### UITableView快速建立
+#### 通过模型控制cell的显示，服务端数据返回解析成model，手动绑定cell直接刷新表。
 
         注意：
         所有的cellModel都需要继承ZKQuickTableBaseCellModel，
@@ -59,4 +61,59 @@
                 tempVc.title = tempModel.titleString;
                 [self.navigationController pushViewController:vc animated:YES];
             }
+        }
+        
+        --------------以下是cellModel的使用方式
+        创建一个Model继承ZKQuickTableBaseCellModel 
+        ZKQuickTableTextModel : ZKQuickTableBaseCellModel
+        
+        @property (nonatomic,copy)NSString *iconImageName;//图标图片
+        @property (nonatomic,copy)NSString *titleString;//标题
+        @property (nonatomic,copy)NSString *detailString;//详情
+        @property (nonatomic,copy)NSString *arrowImageName;//箭头图片
+        //创建model
+        - (id)initWithIconImageName:(NSString *)iconImageName title:(NSString *)title detailString:(NSString *)detailString clickBlock:(ZKClickCellBlock)clickBlock;
+        
+        //创建model
+        - (id)initWithIconImageName:(NSString *)iconImageName title:(NSString *)title detailString:(NSString *)detailString clickBlock:(ZKClickCellBlock)clickBlock
+        {
+        self = [super init];
+        if (self) {
+              self.zkCellBlock = clickBlock;
+              self.isNeedShowLine = YES;
+              self.cellClassString = @"ZKQuickTableTextCell";
+              self.arrowImageName = @"zk_arrow";
+              self.selectionStyle = UITableViewCellSelectionStyleDefault;
+              self.iconImageName = iconImageName;
+              self.titleString = title;
+              self.detailString = detailString;
+           }
+           return self;
+        }
+        
+        -------------一下是cell的使用方式
+        创建cell继承于ZKQuickTableBaseCell
+        ZKQuickTableTextCell : ZKQuickTableBaseCell
+        
+        //-----以下2个方法属于必需实现
+        + (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView;
+        {
+                ZKQuickTableTextCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+                if(cell == nil){
+                        cell = [[ZKQuickTableTextCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+                        cell.accessoryType = UITableViewCellAccessoryNone;
+                }
+                return cell;
+        }
+        - (void)setDataModel:(ZKQuickTableBaseCellModel *)model
+        {
+            [super setDataModel:model];
+            ZKQuickTableTextModel *finalModel = (ZKQuickTableTextModel *)model;
+            if (finalModel.iconImageName.length <= 0 || finalModel.arrowImageName.length <= 0) {
+               KSLog(@"图片没名字");
+            }
+            self.iconImageView.image = KSys_GetImage(finalModel.iconImageName);
+            self.titleLabel.text = finalModel.titleString;
+            self.detailLabel.text = finalModel.detailString;
+            self.arraowImage.image = KSys_GetImage(finalModel.arrowImageName);
         }
