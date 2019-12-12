@@ -1,4 +1,7 @@
 # ZKQuickTable
+# 快速建表，整个项目使用同一个表。
+## UITableView快速建立
+
         注意：
         所有的cellModel都需要继承ZKQuickTableBaseCellModel，
         所有的cell都需要继承ZKQuickTableBaseCell
