@@ -1,0 +1,32 @@
+//
+//  ZKPrefixHeader.pch
+//  KaiDemo
+//
+//  Created by Kai on 2019/11/3.
+//  Copyright © 2019 Kai. All rights reserved.
+//
+
+#ifndef ZKPrefixHeader_pch
+#define ZKPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "ZKSystemConst.h" //跟系统相关的宏定义
+#import "ZKFontConst.h" //跟font相关的宏定义
+#import "ZKColorConst.h" //跟color相关的宏定义
+
+//table
+#import "ZKQuickTableTool.h"
+
+//第三方
+#import <Masonry/Masonry.h>
+
+//扩展类
+#import "UIView+ZKExtension.h"
+#import "UIView+ZKQuick.h"
+#import "UILabel+ZKQuick.h"
+#import "UIImageView+ZKQuick.h"
+
+#endif /* ZKPrefixHeader_pch */
