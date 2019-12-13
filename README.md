@@ -7,8 +7,8 @@
         所有的cell都需要继承ZKQuickTableBaseCell
 
         cell的.m文件中需要实现两个方法
-        //-----以下2个方法属于必需实现
-        + (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView;
+        //-----以下2个方法属于需要实现
+        - (void)setupUI;
         - (void)setDataModel:(ZKQuickTableBaseCellModel *)model;
 
         使用步骤：
@@ -94,14 +94,8 @@
         ZKQuickTableTextCell : ZKQuickTableBaseCell
         
         //-----以下2个方法属于必需实现
-        + (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView;
+        - (void)setupUI
         {
-                ZKQuickTableTextCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-                if(cell == nil){
-                        cell = [[ZKQuickTableTextCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-                        cell.accessoryType = UITableViewCellAccessoryNone;
-                }
-                return cell;
         }
         - (void)setDataModel:(ZKQuickTableBaseCellModel *)model
         {
