@@ -75,7 +75,7 @@
         baseCell.selectionStyle = cellModel.selectionStyle;
     }else
     {
-        baseCell.selectionStyle = self.quickDataModel.selectionStyle;
+        baseCell.selectionStyle = self.quickDataModel.tableSelectionStyle;
     }
     [baseCell setDataModel:cellModel];
     return baseCell;

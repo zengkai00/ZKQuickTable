@@ -399,10 +399,10 @@
 		0CBFB83923A33DD90060DB60 /* ZKQuickTableTool(工具-该文件夹拖入到工程即可) */ = {
 			isa = PBXGroup;
 			children = (
-				0CBFB83A23A33DD90060DB60 /* ZKQuickTableDataModel.h */,
-				0CBFB83C23A33DD90060DB60 /* ZKQuickTableDataModel.m */,
 				0CBFB83B23A33DD90060DB60 /* ZKQuickTableTool.h */,
 				0CBFB83D23A33DD90060DB60 /* ZKQuickTableTool.m */,
+				0CBFB83A23A33DD90060DB60 /* ZKQuickTableDataModel.h */,
+				0CBFB83C23A33DD90060DB60 /* ZKQuickTableDataModel.m */,
 				0CBFB83E23A33DD90060DB60 /* ZKTableBase */,
 			);
 			path = "ZKQuickTableTool(工具-该文件夹拖入到工程即可)";
@@ -411,10 +411,10 @@
 		0CBFB83E23A33DD90060DB60 /* ZKTableBase */ = {
 			isa = PBXGroup;
 			children = (
-				0CBFB84023A33DD90060DB60 /* BaseCell */,
-				0CBFB84723A33DD90060DB60 /* BaseModel */,
 				0CBFB83F23A33DD90060DB60 /* ZKQuickTableManager.h */,
 				0CBFB84E23A33DD90060DB60 /* ZKQuickTableManager.m */,
+				0CBFB84023A33DD90060DB60 /* BaseCell */,
+				0CBFB84723A33DD90060DB60 /* BaseModel */,
 			);
 			path = ZKTableBase;
 			sourceTree = "<group>";
