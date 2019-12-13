@@ -12,16 +12,6 @@
 @end
 @implementation ZKQuickTableBaseFooter
 
-//footer初始化方法
-+ (ZKQuickTableBaseFooter *)footerWithIdentifier:(NSString *)footerIdentifier tableView:(UITableView *)tableView
-{
-    ZKQuickTableBaseFooter *footer = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerIdentifier];
-    if (!footer) {
-        footer = [[ZKQuickTableBaseFooter alloc] initWithReuseIdentifier:footerIdentifier];
-    }
-    return footer;
-}
-
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithReuseIdentifier:reuseIdentifier];
@@ -37,7 +27,7 @@
 }
 - (void)setFooterDataModel:(ZKQuickTableBaseFooterModel *)footerModel
 {
-    KSLog(@"父类的model传入");
+    //KSLog(@"父类的model传入");
 }
 
 /*

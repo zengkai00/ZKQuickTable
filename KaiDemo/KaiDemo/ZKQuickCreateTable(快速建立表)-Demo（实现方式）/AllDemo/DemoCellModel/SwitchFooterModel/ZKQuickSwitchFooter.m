@@ -20,15 +20,6 @@
 @implementation ZKQuickSwitchFooter
 
 //-----必需实现的继承方法
-+ (ZKQuickTableBaseFooter *)footerWithIdentifier:(NSString *)footerIdentifier tableView:(UITableView *)tableView;
-{
-    ZKQuickSwitchFooter *footer = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerIdentifier];
-    if (!footer) {
-        footer = [[ZKQuickSwitchFooter alloc] initWithReuseIdentifier:footerIdentifier];
-    }
-    return footer;
-}
-
 - (void)setupUI
 {
     [super setupUI];

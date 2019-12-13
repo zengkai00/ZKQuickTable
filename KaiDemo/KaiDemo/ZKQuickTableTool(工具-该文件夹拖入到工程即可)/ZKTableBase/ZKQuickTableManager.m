@@ -60,11 +60,23 @@
     ZKQuickTableBaseCellModel *cellModel = (ZKQuickTableBaseCellModel *)sections[indexPath.row];
     Class class = NSClassFromString(cellModel.cellClassString);
     NSAssert([class isSubclassOfClass:[ZKQuickTableBaseCell class]], @"此cellClassString类别必须存在,并且继承ZKQuickTableBaseCell");
-    ZKQuickTableBaseCell *baseCell = [class cellWithIdentifier:cellModel.cellClassString tableView:tableView];
+    ZKQuickTableBaseCell *baseCell = [tableView dequeueReusableCellWithIdentifier:cellModel.cellClassString];
     if (baseCell == nil) {
-       baseCell = [[ZKQuickTableBaseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellModel.cellClassString];
+        if (cellModel.isXibCell == YES) {
+            baseCell = [[NSBundle mainBundle]loadNibNamed:cellModel.cellClassString owner:self options:nil].firstObject;
+        }else
+        {
+            baseCell = [[class alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellModel.cellClassString];
+        }
     }
-    baseCell.selectionStyle = cellModel.selectionStyle;
+    baseCell.accessoryType = UITableViewCellAccessoryNone;
+    
+    if (self.quickDataModel.isOpenModelSelectionStyle == YES) {
+        baseCell.selectionStyle = cellModel.selectionStyle;
+    }else
+    {
+        baseCell.selectionStyle = self.quickDataModel.selectionStyle;
+    }
     [baseCell setDataModel:cellModel];
     return baseCell;
 }
@@ -91,9 +103,9 @@
         ZKQuickTableBaseFooterModel *footerModel = self.zk_footArray[section];
         Class class = NSClassFromString(footerModel.footerClassString);
         NSAssert([class isSubclassOfClass:[ZKQuickTableBaseFooter class]], @"此footerClassString类别必须存在,并且继承ZKQuickTableBaseFooter");
-        ZKQuickTableBaseFooter *footerView = [class footerWithIdentifier:footerModel.footerClassString tableView:tableView];
+        ZKQuickTableBaseFooter *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerModel.footerClassString];
         if (!footerView) {
-            footerView = [[ZKQuickTableBaseFooter alloc] initWithReuseIdentifier:footerModel.footerClassString];
+            footerView = [[class alloc] initWithReuseIdentifier:footerModel.footerClassString];
         }
         [footerView setFooterDataModel:footerModel];
         return footerView;
@@ -106,9 +118,9 @@
         ZKQuickTableBaseHeaderModel *headerModel = self.zk_headerArray[section];
         Class class = NSClassFromString(headerModel.headerClassString);
         NSAssert([class isSubclassOfClass:[ZKQuickTableBaseHeader class]], @"此headerClassString类别必须存在,并且继承ZKQuickTableBaseHeader");
-        ZKQuickTableBaseHeader *headerView = [class headerWithIdentifier:headerModel.headerClassString tableView:tableView];
+        ZKQuickTableBaseHeader *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerModel.headerClassString];
         if (!headerView) {
-            headerView = [[ZKQuickTableBaseHeader alloc] initWithReuseIdentifier:headerModel.headerClassString];
+            headerView = [[class alloc] initWithReuseIdentifier:headerModel.headerClassString];
         }
         [headerView setHeaderDataModel:headerModel];
         return headerView;

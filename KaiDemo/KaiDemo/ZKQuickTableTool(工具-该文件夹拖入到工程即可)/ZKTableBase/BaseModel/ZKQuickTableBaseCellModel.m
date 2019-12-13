@@ -21,6 +21,7 @@
         self.identifier = [NSString stringWithFormat:@"%lf%@",now,threadNumber];
         self.cellHeight = 44;//每个cell默认高度 44
         self.cellClassString = @"ZKQuickTableBaseCell";//默认baseCell
+        self.isXibCell = NO;
         self.isNeedShowLine = NO;
         self.lineColor = [UIColor lightGrayColor];
         self.lineLeftAndRight = 0;

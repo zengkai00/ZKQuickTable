@@ -19,15 +19,6 @@
 
 @implementation ZKQuickTableTextCell
 //-----以下2个方法属于必需实现
-+ (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView;
-{
-    ZKQuickTableTextCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if(cell == nil){
-        cell = [[ZKQuickTableTextCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    return cell;
-}
 - (void)setDataModel:(ZKQuickTableBaseCellModel *)model
 {
     [super setDataModel:model];

@@ -19,9 +19,6 @@
 		0C3909F0239F3B1C00B55710 /* ZKQuickSwitchHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3909EF239F3B1C00B55710 /* ZKQuickSwitchHeaderModel.m */; };
 		0C3909F3239F3B3200B55710 /* ZKQuickSwitchHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3909F2239F3B3200B55710 /* ZKQuickSwitchHeader.m */; };
 		0C416F2C238F6A9000A91B84 /* ZKQuickCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C416F2B238F6A9000A91B84 /* ZKQuickCommonModel.m */; };
-		0C4F77C7239B82DF005ABAD2 /* ZKQuickTableBaseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77C6239B82DF005ABAD2 /* ZKQuickTableBaseHeader.m */; };
-		0C4F77CA239B82F6005ABAD2 /* ZKQuickTableBaseFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77C9239B82F6005ABAD2 /* ZKQuickTableBaseFooter.m */; };
-		0C4F77CD239B8B95005ABAD2 /* ZKQuickTableDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77CC239B8B95005ABAD2 /* ZKQuickTableDataModel.m */; };
 		0C4F77D0239BB6A6005ABAD2 /* ZKQuickTableSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77CF239BB6A6005ABAD2 /* ZKQuickTableSwitchCell.m */; };
 		0C4F77D3239BB6F3005ABAD2 /* ZKQuickTableSwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77D2239BB6F3005ABAD2 /* ZKQuickTableSwitchModel.m */; };
 		0C4F77E4239CD6EB005ABAD2 /* ZKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F77E3239CD6EB005ABAD2 /* ZKSwitch.m */; };
@@ -32,17 +29,20 @@
 		0C4F77F0239D3F6C005ABAD2 /* switchNormalBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C4F77EF239D3F6B005ABAD2 /* switchNormalBg@2x.png */; };
 		0C531DC323A12EDB0022B7A8 /* ZKQuickSwitchFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C531DC223A12EDB0022B7A8 /* ZKQuickSwitchFooterModel.m */; };
 		0C531DC623A12EED0022B7A8 /* ZKQuickSwitchFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C531DC523A12EED0022B7A8 /* ZKQuickSwitchFooter.m */; };
-		0C68A87E23818A910059D0A5 /* ZKQuickTableTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68A87D23818A910059D0A5 /* ZKQuickTableTool.m */; };
-		0C8F4C5F23857F65004B1272 /* ZKQuickTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F4C5E23857F65004B1272 /* ZKQuickTableManager.m */; };
 		0C93E9682392607800879D2C /* UILabel+ZKQuick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93E9672392607800879D2C /* UILabel+ZKQuick.m */; };
 		0C93E96B2393F64A00879D2C /* UIImageView+ZKQuick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93E96A2393F64A00879D2C /* UIImageView+ZKQuick.m */; };
 		0CB70A1D239A019100E7E971 /* ZKQuickTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB70A1C239A019100E7E971 /* ZKQuickTableTextCell.m */; };
 		0CB70A20239A3CE000E7E971 /* UIView+ZKQuick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB70A1F239A3CE000E7E971 /* UIView+ZKQuick.m */; };
 		0CB70A23239A4D5B00E7E971 /* ZKQuickCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB70A22239A4D5B00E7E971 /* ZKQuickCommonCell.m */; };
-		0CD363E62398DE28001284B2 /* ZKQuickTableBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363E52398DE28001284B2 /* ZKQuickTableBaseCell.m */; };
-		0CD363E92398DF84001284B2 /* ZKQuickTableBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363E82398DF84001284B2 /* ZKQuickTableBaseCellModel.m */; };
-		0CD363EC2398E071001284B2 /* ZKQuickTableBaseHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363EB2398E071001284B2 /* ZKQuickTableBaseHeaderModel.m */; };
-		0CD363EF2398E08F001284B2 /* ZKQuickTableBaseFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363EE2398E08F001284B2 /* ZKQuickTableBaseFooterModel.m */; };
+		0CBFB84F23A33DD90060DB60 /* ZKQuickTableDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB83C23A33DD90060DB60 /* ZKQuickTableDataModel.m */; };
+		0CBFB85023A33DD90060DB60 /* ZKQuickTableTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB83D23A33DD90060DB60 /* ZKQuickTableTool.m */; };
+		0CBFB85123A33DD90060DB60 /* ZKQuickTableBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84123A33DD90060DB60 /* ZKQuickTableBaseCell.m */; };
+		0CBFB85223A33DD90060DB60 /* ZKQuickTableBaseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84223A33DD90060DB60 /* ZKQuickTableBaseHeader.m */; };
+		0CBFB85323A33DD90060DB60 /* ZKQuickTableBaseFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84323A33DD90060DB60 /* ZKQuickTableBaseFooter.m */; };
+		0CBFB85423A33DD90060DB60 /* ZKQuickTableBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84823A33DD90060DB60 /* ZKQuickTableBaseCellModel.m */; };
+		0CBFB85523A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84923A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.m */; };
+		0CBFB85623A33DD90060DB60 /* ZKQuickTableBaseFooterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84D23A33DD90060DB60 /* ZKQuickTableBaseFooterModel.m */; };
+		0CBFB85723A33DD90060DB60 /* ZKQuickTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB84E23A33DD90060DB60 /* ZKQuickTableManager.m */; };
 		0CD363F22398E2AB001284B2 /* ZKQuickTableDemoOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363F12398E2AB001284B2 /* ZKQuickTableDemoOneVC.m */; };
 		0CD363F82398E482001284B2 /* ZKQuickTableTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD363F72398E482001284B2 /* ZKQuickTableTextModel.m */; };
 		0CDAC2FB2302B6F700B951F7 /* ZKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDAC2FA2302B6F700B951F7 /* ZKBaseViewController.m */; };
@@ -96,12 +96,6 @@
 		0C3909F2239F3B3200B55710 /* ZKQuickSwitchHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickSwitchHeader.m; sourceTree = "<group>"; };
 		0C416F2A238F6A9000A91B84 /* ZKQuickCommonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickCommonModel.h; sourceTree = "<group>"; };
 		0C416F2B238F6A9000A91B84 /* ZKQuickCommonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickCommonModel.m; sourceTree = "<group>"; };
-		0C4F77C5239B82DF005ABAD2 /* ZKQuickTableBaseHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseHeader.h; sourceTree = "<group>"; };
-		0C4F77C6239B82DF005ABAD2 /* ZKQuickTableBaseHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseHeader.m; sourceTree = "<group>"; };
-		0C4F77C8239B82F6005ABAD2 /* ZKQuickTableBaseFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseFooter.h; sourceTree = "<group>"; };
-		0C4F77C9239B82F6005ABAD2 /* ZKQuickTableBaseFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseFooter.m; sourceTree = "<group>"; };
-		0C4F77CB239B8B95005ABAD2 /* ZKQuickTableDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableDataModel.h; sourceTree = "<group>"; };
-		0C4F77CC239B8B95005ABAD2 /* ZKQuickTableDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableDataModel.m; sourceTree = "<group>"; };
 		0C4F77CE239BB6A6005ABAD2 /* ZKQuickTableSwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableSwitchCell.h; sourceTree = "<group>"; };
 		0C4F77CF239BB6A6005ABAD2 /* ZKQuickTableSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableSwitchCell.m; sourceTree = "<group>"; };
 		0C4F77D1239BB6F3005ABAD2 /* ZKQuickTableSwitchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableSwitchModel.h; sourceTree = "<group>"; };
@@ -119,14 +113,10 @@
 		0C531DC223A12EDB0022B7A8 /* ZKQuickSwitchFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickSwitchFooterModel.m; sourceTree = "<group>"; };
 		0C531DC423A12EED0022B7A8 /* ZKQuickSwitchFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickSwitchFooter.h; sourceTree = "<group>"; };
 		0C531DC523A12EED0022B7A8 /* ZKQuickSwitchFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickSwitchFooter.m; sourceTree = "<group>"; };
-		0C68A87C23818A910059D0A5 /* ZKQuickTableTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableTool.h; sourceTree = "<group>"; };
-		0C68A87D23818A910059D0A5 /* ZKQuickTableTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableTool.m; sourceTree = "<group>"; };
 		0C68F942237069140043C512 /* ZKSystemConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSystemConst.h; sourceTree = "<group>"; };
 		0C68F94323706B3E0043C512 /* ZKFontConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKFontConst.h; sourceTree = "<group>"; };
 		0C68F94423706BCB0043C512 /* ZKColorConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKColorConst.h; sourceTree = "<group>"; };
 		0C6C27E023093A1E0075C0FD /* KaiDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaiDemo.entitlements; sourceTree = "<group>"; };
-		0C8F4C5D23857F65004B1272 /* ZKQuickTableManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableManager.h; sourceTree = "<group>"; };
-		0C8F4C5E23857F65004B1272 /* ZKQuickTableManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableManager.m; sourceTree = "<group>"; };
 		0C93E9662392607800879D2C /* UILabel+ZKQuick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+ZKQuick.h"; sourceTree = "<group>"; };
 		0C93E9672392607800879D2C /* UILabel+ZKQuick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ZKQuick.m"; sourceTree = "<group>"; };
 		0C93E9692393F64A00879D2C /* UIImageView+ZKQuick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZKQuick.h"; sourceTree = "<group>"; };
@@ -137,14 +127,24 @@
 		0CB70A1F239A3CE000E7E971 /* UIView+ZKQuick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKQuick.m"; sourceTree = "<group>"; };
 		0CB70A21239A4D5B00E7E971 /* ZKQuickCommonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickCommonCell.h; sourceTree = "<group>"; };
 		0CB70A22239A4D5B00E7E971 /* ZKQuickCommonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickCommonCell.m; sourceTree = "<group>"; };
-		0CD363E42398DE28001284B2 /* ZKQuickTableBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseCell.h; sourceTree = "<group>"; };
-		0CD363E52398DE28001284B2 /* ZKQuickTableBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseCell.m; sourceTree = "<group>"; };
-		0CD363E72398DF84001284B2 /* ZKQuickTableBaseCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseCellModel.h; sourceTree = "<group>"; };
-		0CD363E82398DF84001284B2 /* ZKQuickTableBaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseCellModel.m; sourceTree = "<group>"; };
-		0CD363EA2398E071001284B2 /* ZKQuickTableBaseHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseHeaderModel.h; sourceTree = "<group>"; };
-		0CD363EB2398E071001284B2 /* ZKQuickTableBaseHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseHeaderModel.m; sourceTree = "<group>"; };
-		0CD363ED2398E08F001284B2 /* ZKQuickTableBaseFooterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseFooterModel.h; sourceTree = "<group>"; };
-		0CD363EE2398E08F001284B2 /* ZKQuickTableBaseFooterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseFooterModel.m; sourceTree = "<group>"; };
+		0CBFB83A23A33DD90060DB60 /* ZKQuickTableDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableDataModel.h; sourceTree = "<group>"; };
+		0CBFB83B23A33DD90060DB60 /* ZKQuickTableTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableTool.h; sourceTree = "<group>"; };
+		0CBFB83C23A33DD90060DB60 /* ZKQuickTableDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableDataModel.m; sourceTree = "<group>"; };
+		0CBFB83D23A33DD90060DB60 /* ZKQuickTableTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableTool.m; sourceTree = "<group>"; };
+		0CBFB83F23A33DD90060DB60 /* ZKQuickTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableManager.h; sourceTree = "<group>"; };
+		0CBFB84123A33DD90060DB60 /* ZKQuickTableBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseCell.m; sourceTree = "<group>"; };
+		0CBFB84223A33DD90060DB60 /* ZKQuickTableBaseHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseHeader.m; sourceTree = "<group>"; };
+		0CBFB84323A33DD90060DB60 /* ZKQuickTableBaseFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseFooter.m; sourceTree = "<group>"; };
+		0CBFB84423A33DD90060DB60 /* ZKQuickTableBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseCell.h; sourceTree = "<group>"; };
+		0CBFB84523A33DD90060DB60 /* ZKQuickTableBaseFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseFooter.h; sourceTree = "<group>"; };
+		0CBFB84623A33DD90060DB60 /* ZKQuickTableBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseHeader.h; sourceTree = "<group>"; };
+		0CBFB84823A33DD90060DB60 /* ZKQuickTableBaseCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseCellModel.m; sourceTree = "<group>"; };
+		0CBFB84923A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseHeaderModel.m; sourceTree = "<group>"; };
+		0CBFB84A23A33DD90060DB60 /* ZKQuickTableBaseFooterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseFooterModel.h; sourceTree = "<group>"; };
+		0CBFB84B23A33DD90060DB60 /* ZKQuickTableBaseCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseCellModel.h; sourceTree = "<group>"; };
+		0CBFB84C23A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableBaseHeaderModel.h; sourceTree = "<group>"; };
+		0CBFB84D23A33DD90060DB60 /* ZKQuickTableBaseFooterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableBaseFooterModel.m; sourceTree = "<group>"; };
+		0CBFB84E23A33DD90060DB60 /* ZKQuickTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableManager.m; sourceTree = "<group>"; };
 		0CD363F02398E2AB001284B2 /* ZKQuickTableDemoOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableDemoOneVC.h; sourceTree = "<group>"; };
 		0CD363F12398E2AB001284B2 /* ZKQuickTableDemoOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKQuickTableDemoOneVC.m; sourceTree = "<group>"; };
 		0CD363F62398E482001284B2 /* ZKQuickTableTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKQuickTableTextModel.h; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6C27E023093A1E0075C0FD /* KaiDemo.entitlements */,
-				0C68A87B23818A220059D0A5 /* ZKQuickTableTool(该文件夹拖入到工程即可) */,
+				0CBFB83923A33DD90060DB60 /* ZKQuickTableTool(工具-该文件夹拖入到工程即可) */,
 				0C8E730523531D9700BF343D /* ZKQuickCreateTable(快速建立表)-Demo（实现方式） */,
 				0C24A4E223029D9000BA2EA4 /* AppDelegate.h */,
 				0C24A4E323029D9000BA2EA4 /* AppDelegate.m */,
@@ -307,19 +307,6 @@
 			path = SwitchHeaderModel;
 			sourceTree = "<group>";
 		};
-		0C416F20238ECB8900A91B84 /* BaseCell */ = {
-			isa = PBXGroup;
-			children = (
-				0CD363E42398DE28001284B2 /* ZKQuickTableBaseCell.h */,
-				0CD363E52398DE28001284B2 /* ZKQuickTableBaseCell.m */,
-				0C4F77C5239B82DF005ABAD2 /* ZKQuickTableBaseHeader.h */,
-				0C4F77C6239B82DF005ABAD2 /* ZKQuickTableBaseHeader.m */,
-				0C4F77C8239B82F6005ABAD2 /* ZKQuickTableBaseFooter.h */,
-				0C4F77C9239B82F6005ABAD2 /* ZKQuickTableBaseFooter.m */,
-			);
-			path = BaseCell;
-			sourceTree = "<group>";
-		};
 		0C416F24238F69D300A91B84 /* DemoCellModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,18 +371,6 @@
 			path = "ZKExtension(扩展类)";
 			sourceTree = "<group>";
 		};
-		0C68A87B23818A220059D0A5 /* ZKQuickTableTool(该文件夹拖入到工程即可) */ = {
-			isa = PBXGroup;
-			children = (
-				0C68A87C23818A910059D0A5 /* ZKQuickTableTool.h */,
-				0C68A87D23818A910059D0A5 /* ZKQuickTableTool.m */,
-				0C4F77CB239B8B95005ABAD2 /* ZKQuickTableDataModel.h */,
-				0C4F77CC239B8B95005ABAD2 /* ZKQuickTableDataModel.m */,
-				0C8F4C602385818E004B1272 /* ZKTableBase */,
-			);
-			path = "ZKQuickTableTool(该文件夹拖入到工程即可)";
-			sourceTree = "<group>";
-		};
 		0C8E730523531D9700BF343D /* ZKQuickCreateTable(快速建立表)-Demo（实现方式） */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,30 +379,6 @@
 				0C3909EC239F393B00B55710 /* AllDemo */,
 			);
 			path = "ZKQuickCreateTable(快速建立表)-Demo（实现方式）";
-			sourceTree = "<group>";
-		};
-		0C8F4C602385818E004B1272 /* ZKTableBase */ = {
-			isa = PBXGroup;
-			children = (
-				0C8F4C5D23857F65004B1272 /* ZKQuickTableManager.h */,
-				0C8F4C5E23857F65004B1272 /* ZKQuickTableManager.m */,
-				0C416F20238ECB8900A91B84 /* BaseCell */,
-				0C8F4C642385820E004B1272 /* BaseModel */,
-			);
-			path = ZKTableBase;
-			sourceTree = "<group>";
-		};
-		0C8F4C642385820E004B1272 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				0CD363E72398DF84001284B2 /* ZKQuickTableBaseCellModel.h */,
-				0CD363E82398DF84001284B2 /* ZKQuickTableBaseCellModel.m */,
-				0CD363EA2398E071001284B2 /* ZKQuickTableBaseHeaderModel.h */,
-				0CD363EB2398E071001284B2 /* ZKQuickTableBaseHeaderModel.m */,
-				0CD363ED2398E08F001284B2 /* ZKQuickTableBaseFooterModel.h */,
-				0CD363EE2398E08F001284B2 /* ZKQuickTableBaseFooterModel.m */,
-			);
-			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		0C93E96523925FD000879D2C /* ZKUIExtension(跟UI相关的扩展类) */ = {
@@ -443,6 +394,55 @@
 				0C4F77EB239CE54E005ABAD2 /* UIView+ZKExtension.m */,
 			);
 			path = "ZKUIExtension(跟UI相关的扩展类)";
+			sourceTree = "<group>";
+		};
+		0CBFB83923A33DD90060DB60 /* ZKQuickTableTool(工具-该文件夹拖入到工程即可) */ = {
+			isa = PBXGroup;
+			children = (
+				0CBFB83A23A33DD90060DB60 /* ZKQuickTableDataModel.h */,
+				0CBFB83C23A33DD90060DB60 /* ZKQuickTableDataModel.m */,
+				0CBFB83B23A33DD90060DB60 /* ZKQuickTableTool.h */,
+				0CBFB83D23A33DD90060DB60 /* ZKQuickTableTool.m */,
+				0CBFB83E23A33DD90060DB60 /* ZKTableBase */,
+			);
+			path = "ZKQuickTableTool(工具-该文件夹拖入到工程即可)";
+			sourceTree = "<group>";
+		};
+		0CBFB83E23A33DD90060DB60 /* ZKTableBase */ = {
+			isa = PBXGroup;
+			children = (
+				0CBFB84023A33DD90060DB60 /* BaseCell */,
+				0CBFB84723A33DD90060DB60 /* BaseModel */,
+				0CBFB83F23A33DD90060DB60 /* ZKQuickTableManager.h */,
+				0CBFB84E23A33DD90060DB60 /* ZKQuickTableManager.m */,
+			);
+			path = ZKTableBase;
+			sourceTree = "<group>";
+		};
+		0CBFB84023A33DD90060DB60 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CBFB84423A33DD90060DB60 /* ZKQuickTableBaseCell.h */,
+				0CBFB84123A33DD90060DB60 /* ZKQuickTableBaseCell.m */,
+				0CBFB84523A33DD90060DB60 /* ZKQuickTableBaseFooter.h */,
+				0CBFB84323A33DD90060DB60 /* ZKQuickTableBaseFooter.m */,
+				0CBFB84623A33DD90060DB60 /* ZKQuickTableBaseHeader.h */,
+				0CBFB84223A33DD90060DB60 /* ZKQuickTableBaseHeader.m */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
+		0CBFB84723A33DD90060DB60 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CBFB84B23A33DD90060DB60 /* ZKQuickTableBaseCellModel.h */,
+				0CBFB84823A33DD90060DB60 /* ZKQuickTableBaseCellModel.m */,
+				0CBFB84A23A33DD90060DB60 /* ZKQuickTableBaseFooterModel.h */,
+				0CBFB84D23A33DD90060DB60 /* ZKQuickTableBaseFooterModel.m */,
+				0CBFB84C23A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.h */,
+				0CBFB84923A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.m */,
+			);
+			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		0CD363DB2398ADEF001284B2 /* DemoController */ = {
@@ -718,30 +718,30 @@
 			files = (
 				0C3909F0239F3B1C00B55710 /* ZKQuickSwitchHeaderModel.m in Sources */,
 				0CD363F82398E482001284B2 /* ZKQuickTableTextModel.m in Sources */,
-				0C4F77C7239B82DF005ABAD2 /* ZKQuickTableBaseHeader.m in Sources */,
+				0CBFB85123A33DD90060DB60 /* ZKQuickTableBaseCell.m in Sources */,
 				0C416F2C238F6A9000A91B84 /* ZKQuickCommonModel.m in Sources */,
 				0C4F77D0239BB6A6005ABAD2 /* ZKQuickTableSwitchCell.m in Sources */,
+				0CBFB85623A33DD90060DB60 /* ZKQuickTableBaseFooterModel.m in Sources */,
 				0CDAC2FB2302B6F700B951F7 /* ZKBaseViewController.m in Sources */,
-				0C4F77CD239B8B95005ABAD2 /* ZKQuickTableDataModel.m in Sources */,
 				0C93E9682392607800879D2C /* UILabel+ZKQuick.m in Sources */,
 				0CB70A23239A4D5B00E7E971 /* ZKQuickCommonCell.m in Sources */,
-				0CD363E92398DF84001284B2 /* ZKQuickTableBaseCellModel.m in Sources */,
-				0CD363EF2398E08F001284B2 /* ZKQuickTableBaseFooterModel.m in Sources */,
-				0C68A87E23818A910059D0A5 /* ZKQuickTableTool.m in Sources */,
-				0CD363E62398DE28001284B2 /* ZKQuickTableBaseCell.m in Sources */,
 				0C93E96B2393F64A00879D2C /* UIImageView+ZKQuick.m in Sources */,
+				0CBFB85023A33DD90060DB60 /* ZKQuickTableTool.m in Sources */,
 				0C24A4E723029D9000BA2EA4 /* ViewController.m in Sources */,
-				0C8F4C5F23857F65004B1272 /* ZKQuickTableManager.m in Sources */,
 				0C24A4F223029D9100BA2EA4 /* main.m in Sources */,
 				0C4F77E4239CD6EB005ABAD2 /* ZKSwitch.m in Sources */,
+				0CBFB85423A33DD90060DB60 /* ZKQuickTableBaseCellModel.m in Sources */,
 				0C24A4E423029D9000BA2EA4 /* AppDelegate.m in Sources */,
 				0C3909F3239F3B3200B55710 /* ZKQuickSwitchHeader.m in Sources */,
-				0CD363EC2398E071001284B2 /* ZKQuickTableBaseHeaderModel.m in Sources */,
 				0C4F77E8239CD9E5005ABAD2 /* ZKSwitchViewController.m in Sources */,
-				0C4F77CA239B82F6005ABAD2 /* ZKQuickTableBaseFooter.m in Sources */,
 				0C531DC323A12EDB0022B7A8 /* ZKQuickSwitchFooterModel.m in Sources */,
+				0CBFB85223A33DD90060DB60 /* ZKQuickTableBaseHeader.m in Sources */,
+				0CBFB84F23A33DD90060DB60 /* ZKQuickTableDataModel.m in Sources */,
+				0CBFB85723A33DD90060DB60 /* ZKQuickTableManager.m in Sources */,
+				0CBFB85323A33DD90060DB60 /* ZKQuickTableBaseFooter.m in Sources */,
 				0CB70A1D239A019100E7E971 /* ZKQuickTableTextCell.m in Sources */,
 				0CD363F22398E2AB001284B2 /* ZKQuickTableDemoOneVC.m in Sources */,
+				0CBFB85523A33DD90060DB60 /* ZKQuickTableBaseHeaderModel.m in Sources */,
 				0CDF92FC2376FF4D005CCCAB /* ZKQuickCreateTableVC.m in Sources */,
 				0CB70A20239A3CE000E7E971 /* UIView+ZKQuick.m in Sources */,
 				0C4F77D3239BB6F3005ABAD2 /* ZKQuickTableSwitchModel.m in Sources */,

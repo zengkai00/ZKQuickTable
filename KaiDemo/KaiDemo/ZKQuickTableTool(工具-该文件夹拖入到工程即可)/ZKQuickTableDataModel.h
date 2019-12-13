@@ -33,6 +33,12 @@ typedef void(^ZKDidSelectCellBlock)(id model,NSIndexPath *indexPath);
 //8.footerView heigh 默认0.01
 @property (nonatomic,assign)CGFloat footerHeight;
 
+//9.cellSelectionStyle 单元格点击效果 默认UITableViewCellSelectionStyleNone
+@property (nonatomic,assign)UITableViewCellSelectionStyle selectionStyle;
+
+//10.是否开启使用model自定义selectionStyle 默认不开启，即使用全局的table里面的selectionStyle
+@property (nonatomic,assign)BOOL isOpenModelSelectionStyle;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZKQuickTableBaseHeader : UITableViewHeaderFooterView
 
-//header初始化方法
-+ (ZKQuickTableBaseHeader *)headerWithIdentifier:(NSString *)headerIdentifier tableView:(UITableView *)tableView;
 //初始化UI方法
 - (void)setupUI;
 //设置数据源方法

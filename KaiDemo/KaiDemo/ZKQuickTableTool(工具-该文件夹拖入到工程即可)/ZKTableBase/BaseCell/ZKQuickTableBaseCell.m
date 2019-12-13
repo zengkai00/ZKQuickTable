@@ -15,16 +15,6 @@
 
 @implementation ZKQuickTableBaseCell
 
-//cell初始化方法
-+ (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView
-{
-    ZKQuickTableBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if(cell == nil){
-        cell = [[ZKQuickTableBaseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    return cell;
-}
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
@@ -34,13 +24,14 @@
 }
 - (void)setupUI
 {
+    KSLog(@"创建父类UI");
 }
 - (void)setDataModel:(ZKQuickTableBaseCellModel *)model
 {
     //是否需要显示底部横线
     if (model.isNeedShowLine == YES) {
         self.bottomLine.backgroundColor = model.lineColor.CGColor;
-        self.bottomLine.frame = CGRectMake(model.lineLeftAndRight, model.cellHeight-0.5, KSys_Screen_Width - 2*model.lineLeftAndRight, 0.5);
+        self.bottomLine.frame = CGRectMake(model.lineLeftAndRight, model.cellHeight-0.5, [UIScreen mainScreen].bounds.size.width - 2*model.lineLeftAndRight, 0.5);
     }
     //当cellClassString没有进行赋值
     if ([model.cellClassString isEqualToString:@"ZKQuickTableBaseCell"]) {

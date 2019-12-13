@@ -18,15 +18,6 @@
 
 @implementation ZKQuickSwitchHeader
 //-----必需实现的继承方法
-+ (ZKQuickTableBaseHeader *)headerWithIdentifier:(NSString *)headerIdentifier tableView:(UITableView *)tableView
-{
-    ZKQuickSwitchHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerIdentifier];
-    if (!header) {
-        header = [[ZKQuickSwitchHeader alloc] initWithReuseIdentifier:headerIdentifier];
-    }
-    return header;
-}
-
 - (void)setupUI
 {
     [super setupUI];

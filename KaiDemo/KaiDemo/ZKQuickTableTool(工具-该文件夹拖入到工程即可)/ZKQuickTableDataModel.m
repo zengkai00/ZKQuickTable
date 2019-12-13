@@ -19,6 +19,8 @@
         self.cellHeight = 44;
         self.headerHeight = 0.01;
         self.footerHeight = 0.01;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.isOpenModelSelectionStyle = NO;
     }
     return self;
 }

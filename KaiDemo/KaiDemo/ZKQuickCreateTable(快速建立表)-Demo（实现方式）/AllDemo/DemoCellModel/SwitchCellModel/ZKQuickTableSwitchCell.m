@@ -20,15 +20,6 @@
 @end
 @implementation ZKQuickTableSwitchCell
 //-----以下2个方法属于必需实现
-+ (ZKQuickTableBaseCell *)cellWithIdentifier:(NSString *)cellIdentifier tableView:(UITableView *)tableView;
-{
-    ZKQuickTableSwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if(cell == nil){
-        cell = [[ZKQuickTableSwitchCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    return cell;
-}
 - (void)setDataModel:(ZKQuickTableBaseCellModel *)model
 {
     [super setDataModel:model];

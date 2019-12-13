@@ -78,6 +78,7 @@
 {
     if (!_quickTableTool) {
         _quickTableTool = [[ZKQuickTableTool alloc] initCreateTableWithView:self.tableBgView tableStyle:UITableViewStyleGrouped];
+        _quickTableTool.quickDataModel.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
     return _quickTableTool;
 }

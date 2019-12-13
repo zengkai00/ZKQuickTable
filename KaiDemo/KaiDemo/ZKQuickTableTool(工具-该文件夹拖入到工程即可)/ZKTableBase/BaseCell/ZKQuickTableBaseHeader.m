@@ -14,16 +14,6 @@
 
 @implementation ZKQuickTableBaseHeader
 
-//header初始化方法
-+ (ZKQuickTableBaseHeader *)headerWithIdentifier:(NSString *)headerIdentifier tableView:(UITableView *)tableView
-{
-    ZKQuickTableBaseHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerIdentifier];
-    if (!header) {
-        header = [[ZKQuickTableBaseHeader alloc] initWithReuseIdentifier:headerIdentifier];
-    }
-    return header;
-}
-
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithReuseIdentifier:reuseIdentifier];
@@ -39,7 +29,7 @@
 }
 - (void)setHeaderDataModel:(ZKQuickTableBaseHeaderModel *)headerModel
 {
-    KSLog(@"父类的model传入");
+    //KSLog(@"父类的model传入");
 }
 /*
 // Only override drawRect: if you perform custom drawing.
