@@ -66,7 +66,7 @@
     [self addTarget:self action:@selector(switchTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
     [self addTarget:self action:@selector(switchTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
     
-    self.normalBgColor = [UIColor redColor];
+    self.normalBgColor = [UIColor lightGrayColor];
     self.selectBgColor = KSwitchColor_16RGB(0x0CA762);
     //2.
     self.showBgView.backgroundColor = self.normalBgColor;
@@ -85,6 +85,13 @@
     self.showBgView.frame = self.bounds;
     self.showBgView.layer.cornerRadius = self.showBgView.height_k * 0.5;
     self.showBgImageView.frame = self.showBgView.bounds;
+    
+    self.startSmallRoundFrame = CGRectMake(ZKSwitch_RoundSpacing, ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing);
+    self.startBigRoundFrame = CGRectMake(self.startSmallRoundFrame.origin.x, self.startSmallRoundFrame.origin.y, self.startSmallRoundFrame.size.width + ZKSwitch_RoundAddWidth, self.startSmallRoundFrame.size.height);
+    
+    self.stopSmallRoundFrame = CGRectMake(self.width_k - self.startSmallRoundFrame.size.width - ZKSwitch_RoundSpacing,self.startSmallRoundFrame.origin.y, self.startSmallRoundFrame.size.width, self.startSmallRoundFrame.size.height);
+    self.stopBigRoundFrame = CGRectMake(self.width_k - self.startBigRoundFrame.size.width - ZKSwitch_RoundSpacing,self.startBigRoundFrame.origin.y, self.startBigRoundFrame.size.width, self.startBigRoundFrame.size.height);
+    
     if (_isOn) {
         self.roundImageView.frame = self.stopSmallRoundFrame;
         self.roundImageView.layer.cornerRadius = self.roundImageView.height_k * 0.5;
@@ -93,13 +100,6 @@
         self.roundImageView.frame = CGRectMake(ZKSwitch_RoundSpacing, ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing);
         self.roundImageView.layer.cornerRadius = self.roundImageView.height_k * 0.5;
     }
-    
-    
-    self.startSmallRoundFrame = CGRectMake(ZKSwitch_RoundSpacing, ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing, self.bounds.size.height-2*ZKSwitch_RoundSpacing);
-    self.startBigRoundFrame = CGRectMake(self.startSmallRoundFrame.origin.x, self.startSmallRoundFrame.origin.y, self.startSmallRoundFrame.size.width + ZKSwitch_RoundAddWidth, self.startSmallRoundFrame.size.height);
-    
-    self.stopSmallRoundFrame = CGRectMake(self.width_k - self.startSmallRoundFrame.size.width - ZKSwitch_RoundSpacing,self.startSmallRoundFrame.origin.y, self.startSmallRoundFrame.size.width, self.startSmallRoundFrame.size.height);
-    self.stopBigRoundFrame = CGRectMake(self.width_k - self.startBigRoundFrame.size.width - ZKSwitch_RoundSpacing,self.startBigRoundFrame.origin.y, self.startBigRoundFrame.size.width, self.startBigRoundFrame.size.height);
 }
 #pragma mark - set up property设置属性
 - (void)setIsOn:(BOOL)isOn
@@ -223,14 +223,14 @@
         }completion:^(BOOL finished) {
             
         }];
+        if (self.switchBlock) {
+            self.switchBlock(_isOn);
+        }
     }
     else
     {
         self.showBgView.backgroundColor = tempColor;
         self.roundImageView.frame = tempRect;
-    }
-    if (self.switchBlock) {
-        self.switchBlock(_isOn);
     }
 }
 
