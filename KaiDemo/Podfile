@@ -5,13 +5,13 @@ use_frameworks!
 inhibit_all_warnings!#忽略所有pods里面的警告
 target 'KaiDemo' do
 
-pod 'AFNetworking'
-pod 'SDWebImage'
+#pod 'AFNetworking'
+#pod 'SDWebImage'
+#pod 'MBProgressHUD' #hud提示
+#pod 'JPush'
+#pod 'FMDB'
 pod 'Masonry'
-pod 'FMDB'
 pod 'MJExtension'
-pod 'MBProgressHUD' #hud提示
-pod 'JPush'
 pod 'YYModel'
 
 end
