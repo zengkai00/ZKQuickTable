@@ -22,6 +22,7 @@
     ZKQuickCommonModel *finalModel = (ZKQuickCommonModel *)model;
     self.titleLabel.text = finalModel.titleString;
     self.arraowImage.image = KSys_GetImage(finalModel.arrowImageName.length > 0 ?finalModel.arrowImageName:@"zk_arrow");
+    self.titleLabel.font = KFont_MainFont(finalModel.fontSize);
 }
 - (void)setupUI
 {
@@ -33,6 +34,7 @@
 {
     if (!_titleLabel) {
         _titleLabel = [UILabel createZKLabelWithFatherView:self.contentView textColor:KColor_666666 textAlignment:NSTextAlignmentLeft font:KFont_MainFont(15)];
+        _titleLabel.numberOfLines = 0;
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(12);
             make.top.bottom.mas_equalTo(0);

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy)NSString *titleString;//标题
 @property (nonatomic,copy)NSString *arrowImageName;//箭头图片
 @property (nonatomic,copy)NSString *pushControllerStr;//跳转的controller
+@property (nonatomic,assign)int fontSize;//字体大小
 
 @end
 

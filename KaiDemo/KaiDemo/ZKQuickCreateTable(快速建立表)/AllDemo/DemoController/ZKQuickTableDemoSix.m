@@ -1,26 +1,25 @@
 //
-//  ZKQuickCreateTableVC.m
+//  ZKQuickTableDemoSix.m
 //  KaiDemo
 //
-//  Created by Kai on 2019/11/9.
+//  Created by Kai on 2019/12/18.
 //  Copyright © 2019 Kai. All rights reserved.
 //
 
-#import "ZKQuickCreateTableVC.h"
-#import "ZKQuickCommonModel.h"
-#import "ZKQuickCommonCell.h"
-@interface ZKQuickCreateTableVC ()
+#import "ZKQuickTableDemoSix.h"
+#import "ZKQuickAnimateCellModel.h"
+#import "ZKQuickAnimateCell.h"
+@interface ZKQuickTableDemoSix ()
 @property (nonatomic,strong)UIView *tableBgView;
 @property (nonatomic,strong)ZKQuickTableTool *quickTableTool;
 @end
 
-@implementation ZKQuickCreateTableVC
+@implementation ZKQuickTableDemoSix
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, KSys_NavAndStatus_Height, KSys_Screen_Width, KSys_Screen_Height - KSys_NavAndStatus_Height)];
     UIView *bgView = [[UIView alloc] init];
     [self.view addSubview:bgView];
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -33,18 +32,16 @@
     
     //建立数据
     NSMutableArray *finalArray = [[NSMutableArray alloc] init];
-    NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"cell带有动画的页面",@"删除单元格",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)",@"上拉加载更多和下拉刷新"];
-    NSArray *controllerArray = @[@"ZKQuickTableDemoOneVC",@"ZKQuickTableDemoTwoVC",@"ZKQuickTableDemoThreeVC",@"ZKQuickTableDemoFourVC",@"ZKQuickTableDemoFiveVC",@"ZKQuickTableDemoSix"];
+    NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"删除单元格",@"cell带有动画的页面",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)"];
+    
     NSMutableArray *sectionOneArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < titleArray.count; i ++) {
-        ZKQuickCommonModel *cellOneModel = [[ZKQuickCommonModel alloc] init];
-        cellOneModel.titleString = titleArray[i];
-        if (i == 8 || i == 4) {
-            cellOneModel.fontSize = 12;
-        }
-        if (controllerArray.count > i) {
-            cellOneModel.pushControllerStr = controllerArray[i];
-        }
+        ZKQuickAnimateCellModel *cellOneModel = [[ZKQuickAnimateCellModel alloc] init];
+        cellOneModel.name = titleArray[i];
+        cellOneModel.isSelect = NO;
+        cellOneModel.cellClassString = @"ZKQuickAnimateCell";
+        cellOneModel.lineWidth = 0;
+        cellOneModel.nameX = 30;
         [sectionOneArray addObject:cellOneModel];
     }
     [finalArray addObject:sectionOneArray];
@@ -60,25 +57,20 @@
 //点击单元格
 - (void)didSelectWithModel:(id)model indexPath:(NSIndexPath *)indexPath
 {
-    ZKQuickCommonModel *tempModel = (ZKQuickCommonModel *)model;
-    KSLog(@"%@,%ld,%ld",tempModel.titleString,indexPath.section,indexPath.row);
-    id vc = [[NSClassFromString(tempModel.pushControllerStr) alloc] init];
-    if ([vc isKindOfClass:[UIViewController class]]) {
-        UIViewController *tempVc = (UIViewController *)vc;
-        tempVc.title = tempModel.titleString;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    ZKQuickAnimateCellModel *currentModel = (ZKQuickAnimateCellModel *)model;
+    currentModel.isAnimate = YES;
+    currentModel.isSelect = !currentModel.isSelect;
+    [self.quickTableTool.zk_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (ZKQuickTableTool *)quickTableTool
 {
     if (!_quickTableTool) {
         _quickTableTool = [[ZKQuickTableTool alloc] initCreateTableWithView:self.tableBgView tableStyle:UITableViewStyleGrouped];
-        _quickTableTool.quickDataModel.tableSelectionStyle = UITableViewCellSelectionStyleDefault;
+        _quickTableTool.quickDataModel.cellHeight = 80;
     }
     return _quickTableTool;
 }
-
 /*
 #pragma mark - Navigation
 

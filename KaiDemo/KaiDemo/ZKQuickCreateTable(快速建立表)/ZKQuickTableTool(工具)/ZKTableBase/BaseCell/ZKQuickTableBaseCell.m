@@ -52,7 +52,7 @@
     if (model.isNeedShowLine == YES) {
         self.bottomLine.hidden = NO;
         self.bottomLine.backgroundColor = model.lineColor.CGColor;
-        self.bottomLine.frame = CGRectMake(model.lineLeftAndRight, model.cellHeight-0.5, [UIScreen mainScreen].bounds.size.width - 2*model.lineLeftAndRight, 0.5);
+        self.bottomLine.frame = CGRectMake(model.lineLeftAndRight, self.frame.size.height-1, [UIScreen mainScreen].bounds.size.width - 2*model.lineLeftAndRight, 1);
     }else
     {
         self.bottomLine.hidden = YES;

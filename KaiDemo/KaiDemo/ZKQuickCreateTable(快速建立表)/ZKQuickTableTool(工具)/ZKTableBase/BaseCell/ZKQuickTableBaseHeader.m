@@ -1,17 +1,18 @@
 //
-//  ZKQuickTableBaseFooter.m
+//  ZKQuickTableBaseHeader.m
 //  KaiDemo
 //
 //  Created by Kai on 2019/12/7.
 //  Copyright © 2019 Kai. All rights reserved.
 //
 
-#import "ZKQuickTableBaseFooter.h"
-#import "ZKQuickTableBaseFooterModel.h"
-@interface ZKQuickTableBaseFooter()
+#import "ZKQuickTableBaseHeader.h"
+#import "ZKQuickTableBaseHeaderModel.h"
+@interface ZKQuickTableBaseHeader()
 @property (nonatomic, strong)CALayer *bottomLine;//底部横线
 @end
-@implementation ZKQuickTableBaseFooter
+
+@implementation ZKQuickTableBaseHeader
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -24,22 +25,22 @@
 
 - (void)setupUI
 {
-    KSLog(@"父类的footer创建");
+    //KSLog(@"父类的header创建");
 }
-- (void)setFooterDataModel:(ZKQuickTableBaseFooterModel *)footerModel
+- (void)setHeaderDataModel:(ZKQuickTableBaseHeaderModel *)headerModel
 {
     //KSLog(@"父类的model传入");
-    if (footerModel.footerHeight <= 0) {
+    if (headerModel.headerHeight <= 0) {
         self.hidden = YES;
     }else
     {
         self.hidden = NO;
     }
     //是否需要显示底部横线
-    if (footerModel.isNeedShowLine == YES) {
+    if (headerModel.isNeedShowLine == YES) {
         self.bottomLine.hidden = NO;
-        self.bottomLine.backgroundColor = footerModel.lineColor.CGColor;
-        self.bottomLine.frame = CGRectMake(footerModel.lineLeftAndRight, footerModel.footerHeight-0.5, [UIScreen mainScreen].bounds.size.width - 2*footerModel.lineLeftAndRight, 0.5);
+        self.bottomLine.backgroundColor = headerModel.lineColor.CGColor;
+        self.bottomLine.frame = CGRectMake(headerModel.lineLeftAndRight, self.frame.size.height-0.5, [UIScreen mainScreen].bounds.size.width - 2*headerModel.lineLeftAndRight, 0.5);
     }else
     {
         self.bottomLine.hidden = YES;
@@ -55,6 +56,7 @@
     }
     return _bottomLine;
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

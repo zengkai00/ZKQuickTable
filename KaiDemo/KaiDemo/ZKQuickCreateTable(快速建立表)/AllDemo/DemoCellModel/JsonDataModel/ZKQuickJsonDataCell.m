@@ -24,7 +24,7 @@
     [super setupUI];
     KSys_WeakSelf;
     self.zkSwitch.switchBlock = ^(BOOL isOn) {
-        
+        weakSelf.finalModel.isAnimate = YES;
         weakSelf.finalModel.switchOn = isOn;
         if (isOn) {
             weakSelf.finalModel.cellHeight = ZKQuickJsonData_ClickCellHeight;

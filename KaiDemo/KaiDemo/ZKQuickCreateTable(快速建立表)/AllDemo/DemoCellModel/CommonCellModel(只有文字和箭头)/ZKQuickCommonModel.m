@@ -17,6 +17,7 @@
         self.isNeedShowLine = YES;
         self.arrowImageName = @"zk_arrow";
         self.cellClassString = @"ZKQuickCommonCell";
+        self.fontSize = 15;
     }
     return self;
 }

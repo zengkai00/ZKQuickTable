@@ -11,8 +11,6 @@
 
 @interface ZKQuickTableBaseFooter : UITableViewHeaderFooterView
 
-////footer初始化方法
-//+ (ZKQuickTableBaseFooter *)footerWithIdentifier:(NSString *)footerIdentifier tableView:(UITableView *)tableView;
 //初始化UI方法
 - (void)setupUI;
 //设置数据源方法
