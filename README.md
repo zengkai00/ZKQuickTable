@@ -2,7 +2,8 @@
 #### UITableView快速建立
 #### 通过模型控制cell的显示，服务端数据返回解析成model，手动绑定cell直接刷新表。
 #### 1.支持自由自定义cell 2.通过model控制cell，添加指定的model即可。
-        ![所有demo图片](https://github.com/zengkai00/ZKQuickTable/blob/master/demo1.png)
+<img src="demo1.png" width="375">
+
         注意：
         所有的cellModel都需要继承ZKQuickTableBaseCellModel，
         所有的cell都需要继承ZKQuickTableBaseCell
