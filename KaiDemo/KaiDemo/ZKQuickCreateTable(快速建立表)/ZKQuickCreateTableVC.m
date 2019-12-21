@@ -33,13 +33,13 @@
     
     //建立数据
     NSMutableArray *finalArray = [[NSMutableArray alloc] init];
-    NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"cell带有动画的页面",@"删除单元格",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)",@"上拉加载更多和下拉刷新"];
+    NSArray *titleArray = @[@"DemoOne-自定义我的页面",@"DemoTwo-带有header和footer的table",@"DemoThree-cell带有按钮、输入框",@"DemoFour-服务端返回的数据页面",@"DemoFive-同一个model,根据type进行绑定不同cell",@"DemoSix-cell带有动画的页面",@"删除单元格",@"长按移动单元格",@"上拉加载更多和下拉刷新",@"缺省UI",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)"];
     NSArray *controllerArray = @[@"ZKQuickTableDemoOneVC",@"ZKQuickTableDemoTwoVC",@"ZKQuickTableDemoThreeVC",@"ZKQuickTableDemoFourVC",@"ZKQuickTableDemoFiveVC",@"ZKQuickTableDemoSix"];
     NSMutableArray *sectionOneArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < titleArray.count; i ++) {
         ZKQuickCommonModel *cellOneModel = [[ZKQuickCommonModel alloc] init];
         cellOneModel.titleString = titleArray[i];
-        if (i == 8 || i == 4) {
+        if (i == 4) {
             cellOneModel.fontSize = 12;
         }
         if (controllerArray.count > i) {

@@ -32,7 +32,7 @@
     
     //建立数据
     NSMutableArray *finalArray = [[NSMutableArray alloc] init];
-    NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"删除单元格",@"cell带有动画的页面",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)"];
+    NSArray *titleArray = @[@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"删除单元格",@"cell带有动画的页面",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)",@"自定义我的页面-DemoOne",@"带有header和footer的table-DemoTwo",@"cell带有按钮、输入框-DemoThree",@"服务端返回的数据页面-DemoFour",@"同一个model,根据type进行绑定不同cell-DemoFive",@"删除单元格",@"cell带有动画的页面",@"长按移动单元格",@"带有tableHeaderView-(tableView已暴露出来，直接赋值)"];
     
     NSMutableArray *sectionOneArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < titleArray.count; i ++) {
