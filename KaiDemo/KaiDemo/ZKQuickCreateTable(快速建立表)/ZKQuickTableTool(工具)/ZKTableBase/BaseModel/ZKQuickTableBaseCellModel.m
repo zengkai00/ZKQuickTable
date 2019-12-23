@@ -28,6 +28,7 @@
         /*UITableViewCellSelectionStyleNone
         UITableViewCellSelectionStyleDefault*/
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.finalTableCellHeight = 44;
     }
     return self;
 }

@@ -35,5 +35,8 @@
 //当前的Section
 @property (nonatomic, assign)NSInteger currentSection;
 
+//当前header最终高度(只作为临时赋值，不作为最终header高度)
+@property (nonatomic, assign)CGFloat finalTableHeaderHeight;//table的最终header的高度 默认高度0.01
+
 @end
 

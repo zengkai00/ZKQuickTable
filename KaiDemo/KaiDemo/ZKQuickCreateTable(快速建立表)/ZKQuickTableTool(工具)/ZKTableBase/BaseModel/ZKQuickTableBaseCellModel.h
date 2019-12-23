@@ -28,6 +28,10 @@ typedef void(^ZKClickCellBlock)(id model);
 @property (nonatomic, copy)ZKClickCellBlock zkCellBlock; //点击事件
 @property (nonatomic, strong)UITableView *currentTable;//当前的table
 @property (nonatomic, strong)NSIndexPath *currentIndex;//当前的index
+
+
+//当前cell最终高度(只作为临时赋值，不作为最终cell高度)
+@property (nonatomic, assign)CGFloat finalTableCellHeight;//table的默认cell的高度 默认高度44
 @end
 
 NS_ASSUME_NONNULL_END

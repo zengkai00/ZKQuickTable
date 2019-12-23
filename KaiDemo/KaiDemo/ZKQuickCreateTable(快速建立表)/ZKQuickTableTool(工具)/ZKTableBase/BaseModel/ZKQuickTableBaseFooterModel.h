@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 //当前的Section
 @property (nonatomic, assign)NSInteger currentSection;
 
+//当前footer最终高度(只作为临时赋值，不作为最终footer高度)
+@property (nonatomic, assign)CGFloat finalTableFooterHeight;//table的最终footer的高度 默认高度0.01
+
 @end
 
 NS_ASSUME_NONNULL_END

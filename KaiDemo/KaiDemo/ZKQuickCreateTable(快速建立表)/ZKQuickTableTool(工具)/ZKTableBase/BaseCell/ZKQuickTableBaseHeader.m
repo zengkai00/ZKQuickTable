@@ -40,7 +40,7 @@
     if (headerModel.isNeedShowLine == YES) {
         self.bottomLine.hidden = NO;
         self.bottomLine.backgroundColor = headerModel.lineColor.CGColor;
-        self.bottomLine.frame = CGRectMake(headerModel.lineLeftAndRight, self.frame.size.height-0.5, [UIScreen mainScreen].bounds.size.width - 2*headerModel.lineLeftAndRight, 0.5);
+        self.bottomLine.frame = CGRectMake(headerModel.lineLeftAndRight, headerModel.finalTableHeaderHeight-0.5, [UIScreen mainScreen].bounds.size.width - 2*headerModel.lineLeftAndRight, 0.5);
     }else
     {
         self.bottomLine.hidden = YES;

@@ -24,6 +24,7 @@
         self.isNeedShowLine = NO;
         self.lineColor = [UIColor lightGrayColor];
         self.lineLeftAndRight = 0;
+        self.finalTableFooterHeight = 0.01;
     }
     return self;
 }

@@ -39,7 +39,7 @@
     if (footerModel.isNeedShowLine == YES) {
         self.bottomLine.hidden = NO;
         self.bottomLine.backgroundColor = footerModel.lineColor.CGColor;
-        self.bottomLine.frame = CGRectMake(footerModel.lineLeftAndRight, self.frame.size.height-0.5, [UIScreen mainScreen].bounds.size.width - 2*footerModel.lineLeftAndRight, 0.5);
+        self.bottomLine.frame = CGRectMake(footerModel.lineLeftAndRight, footerModel.finalTableFooterHeight-0.5, [UIScreen mainScreen].bounds.size.width - 2*footerModel.lineLeftAndRight, 0.5);
     }else
     {
         self.bottomLine.hidden = YES;

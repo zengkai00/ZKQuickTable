@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         self.headerClassString = @"ZKQuickJsonDataHeader";
-        self.headerHeight = 44;
+        self.headerHeight = 80;
         self.isNeedShowLine = YES;
         self.lineColor = KColor_Cyan;
     }

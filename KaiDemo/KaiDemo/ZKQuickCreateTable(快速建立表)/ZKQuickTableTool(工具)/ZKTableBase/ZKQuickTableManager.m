@@ -79,6 +79,15 @@
     }
     cellModel.currentIndex = indexPath;//传入当前的Indexpath
     cellModel.currentTable = tableView;//传入当前table
+    
+    //因为先执行cellForRowAtIndexPath 在执行heightForRowAtIndexPath
+    if (self.quickDataModel.isOpenCellModelHeight) {
+        cellModel.finalTableCellHeight = cellModel.cellHeight;
+    }
+    else
+    {
+        cellModel.finalTableCellHeight = self.quickDataModel.cellHeight;
+    }
     [baseCell setDataModel:cellModel];
     return baseCell;
 }
@@ -111,6 +120,13 @@
         }
         footerModel.currentTable = tableView;
         footerModel.currentSection = section;
+        if (self.quickDataModel.isOpenFooterModelHeight) {
+            footerModel.finalTableFooterHeight = footerModel.footerHeight;
+        }
+        else
+        {
+            footerModel.finalTableFooterHeight = self.quickDataModel.footerHeight;
+        }
         [footerView setFooterDataModel:footerModel];
         return footerView;
     }
@@ -128,6 +144,13 @@
         }
         headerModel.currentTable = tableView;
         headerModel.currentSection = section;
+        if (self.quickDataModel.isOpenHeaderModelHeight) {
+            headerModel.finalTableHeaderHeight = headerModel.headerHeight;
+        }
+        else
+        {
+            headerModel.finalTableHeaderHeight = self.quickDataModel.headerHeight;
+        }
         [headerView setHeaderDataModel:headerModel];
         return headerView;
     }
